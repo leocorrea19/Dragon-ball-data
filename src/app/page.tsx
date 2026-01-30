@@ -52,7 +52,7 @@ export default function Home() {
 
                         {/* Contenido */}
                         <div className="relative z-10 flex flex-col items-center gap-2">
-                            <h2 className="font-headline text-2xl font-black tracking-[0.2em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] transition-all duration-300 md:text-5xl group-hover:scale-105 group-hover:text-primary">
+                            <h2 className="font-headline text-2xl font-black tracking-[0.2em] text-white text-shadow-custom transition-all duration-300 md:text-5xl group-hover:scale-105 group-hover:text-primary">
                                 {categoria.titulo}
                             </h2>
                             <div className="md:opacity-0 flex items-center gap-3 text-xs md:text-base font-bold uppercase tracking-[0.3em] drop-shadow-[0_0_2px_rgba(0,0,0,1)] text-white/100 opacity-100 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 translate-y-4">

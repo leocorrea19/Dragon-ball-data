@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
@@ -100,8 +100,23 @@ export default {
       },
       backgroundImage: {
         'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffd700' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E\")",
+      },
+      textShadow: {
+        'custom': '-3px 3px 1px rgba(0,0,0,0.5)',
       }
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function ({ addUtilities, theme }: any) {
+      const textShadows = theme('textShadow');
+      const utilities = Object.entries(textShadows).reduce((acc: any, [key, value]) => {
+        acc[key === 'DEFAULT' ? '.text-shadow' : `.text-shadow-${key}`] = {
+          textShadow: value as string,
+        };
+        return acc;
+      }, {});
+      addUtilities(utilities);
+    },
+  ],
 } satisfies Config;

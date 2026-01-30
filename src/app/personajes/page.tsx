@@ -54,12 +54,12 @@ export default async function Home({
     <div className="flex w-full flex-col">
 
       <div className="flex flex-col items-center text-center mt-16">
-        <h1 className="font-headline text-5xl font-bold tracking-tight md:text-7xl">
+        <h1 className="font-headline text-4xl font-bold tracking-tight md:text-7xl">
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Personajes
           </span>
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
+        <p className="mt-4 max-w-2xl text-base text-muted-foreground md:text-xl">
           Busca a los personajes de Dragon Ball que más te gusten.
         </p>
       </div>

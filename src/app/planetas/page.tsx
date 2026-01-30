@@ -37,13 +37,13 @@ export default async function PlanetasPage({
   return (
     <div className="container mx-auto max-w-7xl px-4 py-16">
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-headline text-5xl font-bold tracking-tight md:text-7xl">
+        <h1 className="font-headline text-4xl font-bold tracking-tight md:text-7xl">
           Explora los{' '}
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Planetas
           </span>
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
+        <p className="mt-4 max-w-2xl text-base text-muted-foreground md:text-xl">
           Cada mundo tiene su propia historia.
         </p>
       </div>
